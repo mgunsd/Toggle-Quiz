@@ -7,6 +7,16 @@
 - `npx create-react-app toggle-quiz typescript`
 - `yarn add styled-components`
 
+```
+"compilerOptions": {
+  ...
+    "baseUrl": "src"
+  },
+```
+
+- `git commit -am "Project started based on CRA-typescript"`
+- `git commit -am "Absolute path configured at tsconfig.json"`
+
 </details>
 
 <details><summary><h3>Task Detail</h3></summary>
