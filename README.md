@@ -6,6 +6,7 @@
 
 - `npx create-react-app toggle-quiz typescript`
 - `yarn add styled-components`
+- `yarn add @types/styled-components gh-pages --dev`
 
 ```
 "compilerOptions": {
@@ -16,6 +17,7 @@
 
 - `git commit -am "Project started based on CRA-typescript"`
 - `git commit -am "Absolute path configured at tsconfig.json"`
+- `git commit -m "Helper packages and devDependencies installed: styled-components gh-pages"`
 
 </details>
 
