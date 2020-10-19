@@ -1,12 +1,17 @@
 import buildContext from './buildContext';
-//import quiz from 'api/quiz';
+import data from 'data/quiz.json';
 
 interface IAction {
   type:string,
   payload:any
 }
 interface IState {
-  quiz:[]
+  correct:boolean,
+  quiz: {
+    toptext:string,
+    subtext:string,
+    options:any
+  }
 }
 
 const QuizReducer = (state: IState, action: IAction): IState => {
@@ -19,26 +24,24 @@ const QuizReducer = (state: IState, action: IAction): IState => {
 };
 
 
-const getQuiz = (dispatch:any) => ()=> {
-  dispatch({ type: 'quiz', payload: [{ Q1: 'Q1' }, { Q2: "Q2" }] });
-};
+const getQuiz = (dispatch:React.Dispatch<IAction>) => (index:number)=> {
 
-// const getQuiz = dispatch => async (quiz) => {
-//   try {
-//     const response = await quiz.get('/current');
-//     //console.log(response);
-//     dispatch({ type: 'quiz', payload: response.data })
+  try {
+    console.log(data[index]);
+    dispatch({ type: 'quiz', payload: data[index] });
+  } catch (err) { console.log('error occured:', err);}
+  };
 
-//   } catch (err) {
-//     console.log(err);
-//     dispatch({ type: 'error', payload: err });
-//   }
-// };
 
 export const { Provider, Context } = buildContext(
   QuizReducer,
   { getQuiz },
   {
-    quiz: []
+    correct:false,
+    quiz: {
+      toptext:' ',
+      subtext:' ',
+      options:[]
+    }
   },
 );

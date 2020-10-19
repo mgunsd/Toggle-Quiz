@@ -2,6 +2,11 @@
 
 ## [DEMO](https://mgunsd.github.io/Toggle-Quiz-Card/)
 
+## Features
+
+- [x] Quiz data and state managed by context sys. It fetches data from local json, ready to make an external http req to get data from remote.
+- [x] the component is reusable, can handle different options, and the number of options changing.
+
 <details><summary><h3>Log</h3></summary>
 
 - `npx create-react-app toggle-quiz typescript`
@@ -18,42 +23,31 @@
 - `git commit -am "Project started based on CRA-typescript"`
 - `git commit -am "Absolute path configured at tsconfig.json"`
 - `git commit -m "Helper packages and devDependencies installed: styled-components gh-pages"`
+- `git commit -m "Reusable containers constructed"`
+- `git commit -m "Quiz Context & Theme Context constructed"`
+- `git commit -m "Data quiz.json handled by QuizContext"`
 
 </details>
 
 <details><summary><h3>Task Detail</h3></summary>
 
-# Coding Task
+## Coding Task
 
-Your primary task is to build an app to retrieve weather information from a public weather API(https://rapidapi.com/weatherbit/api/weather/endpoints).
+The task is to make a component using React. I video of how the component should work is attached.
+The link to the zeplin project is here (you can use this to get styles for the component):[link](zpl.io/aR3rr0b)
 
-In this task, as in our business, performance, security and good code practices are key. It would be great if the architecture
-of the application reflected these constraints.
-The app should have 2 pages:
+### Requirements:
 
-- The first page should give me the current weather for one of the below locations
+- [x] the component should be responsive down to 320px
 
-- The second page should give me the weather extended(16 days) forcast for the locations below.
-  This page also should give me a search area where I can filter the results down by:
-  _ Min Temperature, where the results should match any min temperature lower or equals than the value provided
-  _ Max Temperature, where the results should match any max temperature higher or equals than the value provided
+- [x] some form of type checking should be used e.g. flow, propTypes, typescript
 
-Locations: (London, New York, Mumbai, Sydney, Tokyo)
+- the solution should lock once the correct answer is reached so the toggles can no longer be switched
 
-## Requirements
-
-- React and Typescript must be used
-- A README file should be supplied to explain how to run the application and any other information
-  relating to the code that you feel would be valuable to share. Please try to add as much detail as you can.
-- The application should be responsive (desktop, tablet and mobile).
-
-## Notes
-
-- Feel free to choose the technologies/tools/Frameworks you want to choose.
-- The focus should be on the quality of the source code.
-- It may be easier to give us a link to a git repo when you're done, otherwise a compressed git archive would be fine.
-- The front end should be simple, no need for elaborate UI,
-  a simple display of some data in a creative way will suffice.
+- [x] the component should be reusable i.e. It should be designed so it can easily support the data presented changing e.g. a different scenario in which the question is: "What are the ideal conditions inside an office?" With toggle options of, for instance, (good pay, bad pay). (lot of meetings, less meetings), (free coffee, expensive coffee), (bear in office, dog in office). I.e. the options, and the number of options changing.
+- [x] Ignore the navbar or footer just the toggles component itself
+- [x] the toggles should animate between the two states (see attached video)
+- [x] the background color should change in proportion to how "correct" the answer is (see video attached)
 
 </details>
 
