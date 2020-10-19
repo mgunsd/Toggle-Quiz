@@ -26,6 +26,7 @@
 - `git commit -m "Reusable containers constructed"`
 - `git commit -m "Quiz Context & Theme Context constructed"`
 - `git commit -m "Data quiz.json handled by QuizContext"`
+- `git commit -m "Toggle switch animation featute added"`
 
 </details>
 

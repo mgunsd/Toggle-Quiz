@@ -1,9 +1,17 @@
-import React, { FC } from 'react';
+import React, { FC , useContext, useEffect} from 'react';
+import { QuizContext } from 'context';
 import styled from 'styled-components';
 import { Card, Body, H4, Toggle } from './commons';
+//import data from 'data/quiz.json';
 
-// this is component with state
-
+interface IState {
+  correct:boolean,
+  quiz: {
+    toptext:string,
+    subtext:string,
+    options:any
+  }
+}
 
 const QuizContainer = styled.div`
  ${Card}
@@ -20,13 +28,21 @@ const QuizSubtext = styled(Body)`
 `;
 
 
-export const Quiz: FC= () => 
+export const Quiz: FC= () => {
+ const { state:{quiz, correct}, getQuiz } = useContext(QuizContext);
+ //const quiz= data[0]; use directly from data bypass context sys
+
+useEffect(() => {
+    getQuiz(0)
+  }, []);
+
+return (
   <QuizContainer>
-    <QuizStatement> Choose the best option </QuizStatement>
-    <Toggle>Question1</Toggle>
-    <Toggle>Question2</Toggle>
-    <Toggle>Question3</Toggle>
-    <Toggle>Question4</Toggle>
-    <QuizSubtext> Not Quite ! </QuizSubtext>
-  </QuizContainer>;
- 
+    <QuizStatement> {quiz.toptext} </QuizStatement>
+    {quiz.options.map((option:any, i:number) => {
+        return <Toggle key={i} {...option} />
+      })}    
+    <QuizSubtext> {quiz.subtext.false} </QuizSubtext>
+  </QuizContainer>
+)
+};
