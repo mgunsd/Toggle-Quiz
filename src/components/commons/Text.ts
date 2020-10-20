@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Color, Font } from 'utils';
+import { Color, Font } from 'styles';
 
 //Master text styles
 export const Typography = css`

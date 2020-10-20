@@ -14,15 +14,3 @@ export const Card = css`
   padding: 24px;
   overflow: hidden;
 `;
-
-// Can be reusable as a plaincard as well 
-
-// const CardContainer =styled.div`
-// ${Card}
-// `;
-
-// export const PlainCard: FC= ({ children }) => 
-//   <CardContainer>
-//     {children}
-//   </CardContainer>;
- 

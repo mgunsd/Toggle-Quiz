@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import styled from "styled-components";
-import { Color } from 'utils';
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import { Color } from 'styles';
 
 const BaseContainer = styled.div`
   display:flex;
@@ -12,6 +12,6 @@ const BaseContainer = styled.div`
 `;
 
 export const Base: FC= ({ children }) =>
-    <BaseContainer>
-      {children}
-    </BaseContainer>
+  <BaseContainer>
+    {children}
+  </BaseContainer>

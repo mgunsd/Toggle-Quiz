@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
-import { Font } from 'utils';
+import { Font } from 'styles';
 
 export const ButtonText = styled.p`
   font: normal bold 17px / 1.5em ${Font('body')};

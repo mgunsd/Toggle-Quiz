@@ -24,9 +24,15 @@
 - `git commit -am "Absolute path configured at tsconfig.json"`
 - `git commit -m "Helper packages and devDependencies installed: styled-components gh-pages"`
 - `git commit -m "Reusable containers constructed"`
+
 - `git commit -m "Quiz Context & Theme Context constructed"`
+
+  - I know it is a bit overshot to contsruct a context for small component, I dit it incase other features or data request funcs. can be added in the future. Alternatively I could have keep all my states in useState hooks and helper funcs in Quiz.tsx Component.
+  - Theme context may not needed neither :).
+
 - `git commit -m "Data quiz.json handled by QuizContext"`
 - `git commit -m "Toggle switch animation featute added"`
+- `git commit -m "Simplified file structure"`
 
 </details>
 
@@ -40,15 +46,12 @@ The link to the zeplin project is here (you can use this to get styles for the c
 ### Requirements:
 
 - [x] the component should be responsive down to 320px
-
 - [x] some form of type checking should be used e.g. flow, propTypes, typescript
-
-- the solution should lock once the correct answer is reached so the toggles can no longer be switched
-
+- [ ]the solution should lock once the correct answer is reached so the toggles can no longer be switched
 - [x] the component should be reusable i.e. It should be designed so it can easily support the data presented changing e.g. a different scenario in which the question is: "What are the ideal conditions inside an office?" With toggle options of, for instance, (good pay, bad pay). (lot of meetings, less meetings), (free coffee, expensive coffee), (bear in office, dog in office). I.e. the options, and the number of options changing.
 - [x] Ignore the navbar or footer just the toggles component itself
 - [x] the toggles should animate between the two states (see attached video)
-- [x] the background color should change in proportion to how "correct" the answer is (see video attached)
+- [] the background color should change in proportion to how "correct" the answer is (see video attached)
 
 </details>
 

@@ -1,7 +1,13 @@
 import React, { FC } from 'react';
 import { Theme, GlobalStyles } from 'styles';
 import { QuizProvider } from 'context';
-import { ToggleQuiz } from 'pages/ToggleQuiz';
+import { Base, Quiz} from 'components';
+
+const ToggleQuiz: FC = () =>
+  <Base>
+    <Quiz/>
+  </Base>
+
 
 const App: FC = () => {
   return (

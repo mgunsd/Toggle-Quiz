@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { useState, FC } from 'react';
 import styled from 'styled-components';
 import { Body } from './Text';
 
@@ -31,7 +31,6 @@ const ToggleTab = styled.button`
   padding: 12px 10px;
   align-items: center;
   justify-content: center;
- 
   cursor: pointer;
   outline: none;
   overflow: hidden;
@@ -58,31 +57,47 @@ const ToggleSlider = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  
 `;
 
 interface IToggleProps {
-  //onClick: Function;
   index0:string;
   index1:string;
+  correctAnswer:number;
+  onClick:Function;
+  setAnswer:any;
 }
 
-
 export const Toggle: FC<IToggleProps> = (props) => {
-  const [toggled, setToggled] = React.useState(false);
+  const [index, setIndex] = useState(0);
+ 
   return(
   <ToggleContainer>
     <ToggleTab
        onClick={() => {
-        setToggled((select) => !select);
+        setIndex(0);
+        props.onClick(index!==props.correctAnswer);      
       }}
-    ><Body>{props.index0}</Body>
+    >
+     <Body
+      style={{ color: index===0 ? 'hsla(0, 30%, 0%, 0.5)' : 'white' }}
+      >
+       {props.index0}
+     </Body>
     </ToggleTab>
     <ToggleTab
        onClick={() => {
-        setToggled((checked) => !checked);
+        setIndex(1);
+        props.onClick(index!==props.correctAnswer);
       }}
-    ><Body>{props.index1}</Body></ToggleTab>
-    <ToggleSlider style={{ transform: toggled ? ' translateX(100%)' : ' translateX(0%)' }}/>
+    >
+       <Body
+        style={{ color: index===1 ? 'hsla(0, 30%, 0%, 0.5)' : 'white' }}
+        >
+       {props.index1}
+     </Body>
+    </ToggleTab>
+    <ToggleSlider style={{ transform: index===1 ? 'translateX(100%)' : 'translateX(0%)' }}/>
   </ToggleContainer>
   );
 }

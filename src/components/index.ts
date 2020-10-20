@@ -1,1 +1,2 @@
-export {Base, Card} from './commons';
+export { Base } from './commons/Base';
+export { Quiz } from './Quiz';

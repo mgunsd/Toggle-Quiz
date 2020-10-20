@@ -5,7 +5,7 @@
   "options":[
   { "index0": "React", "index1": "Angular", "correctAnswer": 0 },
   { "index0": "JavaScript", "index1": "TypeScript", "correctAnswer": 1 },
-  { "index0": "Context", "index1": "Redux", "correctAnswer": 0 }
+  { "index0": "Context", "index1": "Redux", "correctAnswer": 1 }
   ]
 },
 { 

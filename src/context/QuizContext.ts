@@ -7,6 +7,7 @@ interface IAction {
 }
 interface IState {
   correct:boolean,
+  count:number,
   quiz: {
     toptext:string,
     subtext:string,
@@ -18,26 +19,29 @@ const QuizReducer = (state: IState, action: IAction): IState => {
   switch (action.type) {
     case 'quiz':
       return { ...state, quiz: action.payload };
+    case 'count':
+      return { ...state, count: action.payload };
     default:
       return state;
   }
 };
 
-
 const getQuiz = (dispatch:React.Dispatch<IAction>) => (index:number)=> {
-
   try {
-    console.log(data[index]);
     dispatch({ type: 'quiz', payload: data[index] });
-  } catch (err) { console.log('error occured:', err);}
-  };
+    console.log(data[index]);
+  } catch (err) { console.log('an error occured:', err);}
+};
 
+const setCount = (dispatch:React.Dispatch<IAction>)=> (correct:number,total:number) => {
+  dispatch({ type: 'count', payload: correct/total });
+  console.log(correct,"correct",total,"total")
+}
 
 export const { Provider, Context } = buildContext(
   QuizReducer,
-  { getQuiz },
+  { getQuiz, setCount},
   {
-    correct:false,
     quiz: {
       toptext:' ',
       subtext:' ',

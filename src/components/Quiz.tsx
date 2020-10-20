@@ -1,20 +1,13 @@
-import React, { FC , useContext, useEffect} from 'react';
+import React, { FC , useContext, useEffect, useState} from 'react';
 import { QuizContext } from 'context';
 import styled from 'styled-components';
 import { Card, Body, H4, Toggle } from './commons';
 //import data from 'data/quiz.json';
 
-interface IState {
-  correct:boolean,
-  quiz: {
-    toptext:string,
-    subtext:string,
-    options:any
-  }
-}
 
-const QuizContainer = styled.div`
+const QuizContainer = styled.div<{count: number}>`
  ${Card}
+  background-color: ${props => getColor(props.count)};
   background-image: linear-gradient(to bottom, hsla(19, 94%, 68%, 0.7), hsla(8, 93%, 54%, 0.69));
 `;
 
@@ -28,21 +21,45 @@ const QuizSubtext = styled(Body)`
 `;
 
 
-export const Quiz: FC= () => {
- const { state:{quiz, correct}, getQuiz } = useContext(QuizContext);
- //const quiz= data[0]; use directly from data bypass context sys
+const getColor = (value:number) =>{
+  //value from 0 to 1
+  const hue=((1-value)*120).toString(10);
+  return ["hsl(",hue,",100%,50%)"].join("");
+};
 
-useEffect(() => {
+
+export const Quiz: FC= () => {
+  
+  const createDefaultValues = () => {
+    console.log("initial values",quiz.options.map((option:any) => Math.round(Math.random())));
+     return quiz.options.map((option:any) => Math.round(Math.random()));
+  }
+  const { state:{quiz, count}, getQuiz, setCount } = useContext(QuizContext);
+  const [answers, setAnswers] = useState(createDefaultValues());
+
+  useEffect(() => {
     getQuiz(0)
   }, []);
 
-return (
-  <QuizContainer>
-    <QuizStatement> {quiz.toptext} </QuizStatement>
-    {quiz.options.map((option:any, i:number) => {
-        return <Toggle key={i} {...option} />
-      })}    
-    <QuizSubtext> {quiz.subtext.false} </QuizSubtext>
-  </QuizContainer>
-)
+  console.log("initial answers",answers);
+  console.log("initial count",count);
+  
+  const countCorrect = (i:number,a:boolean)=>{
+    console.log("answers",answers);
+    let copy = [...answers];
+      copy[i]=a?1:0;
+      console.log("copy",copy);
+      setAnswers(copy)
+      setCount(copy.filter(a=>a===1).length,  quiz.options.length);
+  }
+
+  return (
+    <QuizContainer  count={count}>
+      <QuizStatement> {quiz.toptext} </QuizStatement>
+      {quiz.options.map((option:any, i:number) => {
+          return <Toggle key={i} {...option} onClick={(a:boolean)=>countCorrect(i,a)} />
+        })}    
+      <QuizSubtext> {quiz.subtext.false} </QuizSubtext>
+    </QuizContainer>
+  )
 };
