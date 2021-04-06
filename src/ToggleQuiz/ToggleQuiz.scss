@@ -1,0 +1,19 @@
+$font: muli, sans-serif;
+
+%typography {
+  text-align: center;
+  color: #fff;
+}
+
+.statement {
+  @extend %typography;
+  font: normal 800 17px /1.5em $font;
+  letter-spacing: 0.25px;
+  margin: 24px auto;
+}
+.text {
+  @extend %typography;
+  font: normal 700 14px / 18px $font;
+  letter-spacing: 0.38px;
+  margin: 14px 0;
+}

@@ -1,0 +1,24 @@
+$gradient-1: linear-gradient(
+  to bottom,
+  hsla(19, 94%, 68%, 0.7),
+  hsla(8, 93%, 54%, 0.69)
+);
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  border-radius: 8px;
+  width: clamp(304px, 65%, 1024px);
+  height: clamp(365px, 50%, 80%);
+  padding: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 8px 2px hsla(0, 0%, 67%, 0.4);
+  background-image: linear-gradient(
+    to bottom,
+    hsla(19, 94%, 68%, 0.7),
+    hsla(8, 93%, 54%, 0.69)
+  );
+}
