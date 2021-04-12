@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# Toggle Quiz Component Demo App
+
+## [DEMO](https://mgunsd.github.io/Toggle-Quiz)
+
+<details><summary><h3>Task Detail</h3></summary>
+
+## Coding Task
+
+The task is to make a component using React. I video of how the component should work is attached.
+The link to the zeplin project is here (you can use this to get styles for the component):[link](zpl.io/aR3rr0b)
+
+### Requirements:
+
+- [x] the component should be responsive down to 320px
+- [x] some form of type checking should be used e.g. flow, propTypes, typescript
+- [x]the solution should lock once the correct answer is reached so the toggles can no longer be switched
+- [x] the component should be reusable i.e. It should be designed so it can easily support the data presented changing e.g. a different scenario in which the question is: "What are the ideal conditions inside an office?" With toggle options of, for instance, (good pay, bad pay). (lot of meetings, less meetings), (free coffee, expensive coffee), (bear in office, dog in office). I.e. the options, and the number of options changing.
+- [x] Ignore the navbar or footer just the toggles component itself
+- [x] the toggles should animate between the two states (see attached video)
+- [x] the background color should change in proportion to how "correct" the answer is (see video attached)
+
+</details>
+
+<details>
+<summary> <h2>How to Run ?</h2>
+</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -8,23 +33,23 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
@@ -44,3 +69,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+</details>
