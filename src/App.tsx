@@ -1,5 +1,5 @@
 import React from 'react';
-import { ToggleQuiz } from './ToggleQuiz/ToggleQuiz';
+import { ToggleQuiz } from './components/ToggleQuiz/ToggleQuiz';
 
 const App = () => {
   return (

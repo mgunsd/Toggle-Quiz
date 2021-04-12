@@ -1,0 +1,24 @@
+[
+  {
+    "toptext": "Choose the best option",
+    "subtext": { "true": "Well done", "false": "Not Quite !" },
+    "sets": [
+      { "options": ["React", "Angular"], "Answer": 0 },
+      { "options": ["JavaScript", "TypeScript"], "Answer": 1 },
+      { "options": ["Context", "Redux"], "Answer": 1 }
+    ]
+  },
+  {
+    "toptext": "An animal cell contains: ",
+    "subtext": {
+      "true": "The answer is correct",
+      "false": "The answer is incorrect"
+    },
+    "options": [
+      [["Cellulose", "Mitochondria"], 1],
+      [["Cell Wall", "Ribosomes"], 1],
+      [["Chloroplats", "Cytoplasm"], 1],
+      [["Partially permeable membrane", "impermeable membrane"], 0]
+    ]
+  }
+]
