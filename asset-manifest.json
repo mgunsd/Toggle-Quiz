@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Toggle-Quiz/static/css/main.7bce2607.chunk.css",
+    "main.js": "/Toggle-Quiz/static/js/main.1d8a0e45.chunk.js",
+    "main.js.map": "/Toggle-Quiz/static/js/main.1d8a0e45.chunk.js.map",
+    "runtime-main.js": "/Toggle-Quiz/static/js/runtime-main.5e139f2e.js",
+    "runtime-main.js.map": "/Toggle-Quiz/static/js/runtime-main.5e139f2e.js.map",
+    "static/js/2.cabce85d.chunk.js": "/Toggle-Quiz/static/js/2.cabce85d.chunk.js",
+    "static/js/2.cabce85d.chunk.js.map": "/Toggle-Quiz/static/js/2.cabce85d.chunk.js.map",
+    "static/js/3.8dd2eb61.chunk.js": "/Toggle-Quiz/static/js/3.8dd2eb61.chunk.js",
+    "static/js/3.8dd2eb61.chunk.js.map": "/Toggle-Quiz/static/js/3.8dd2eb61.chunk.js.map",
+    "index.html": "/Toggle-Quiz/index.html",
+    "static/css/main.7bce2607.chunk.css.map": "/Toggle-Quiz/static/css/main.7bce2607.chunk.css.map",
+    "static/js/2.cabce85d.chunk.js.LICENSE.txt": "/Toggle-Quiz/static/js/2.cabce85d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e139f2e.js",
+    "static/js/2.cabce85d.chunk.js",
+    "static/css/main.7bce2607.chunk.css",
+    "static/js/main.1d8a0e45.chunk.js"
+  ]
+}
